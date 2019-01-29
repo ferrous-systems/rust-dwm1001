@@ -12,8 +12,8 @@ embedded-hal         = "0.2.1"
 nrf52832-hal         = "0.6.0"
 
 [dependencies.dw1000]
-git = "https://github.com/braun-robotics/rust-dw1000.git"
-rev = "master"
+git = "https://github.com/ferrous-systems/rust-dw1000.git"
+rev = "january"
 
 [dev-dependencies]
 heapless          = "0.4.0"
