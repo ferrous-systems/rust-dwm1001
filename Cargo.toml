@@ -12,13 +12,13 @@ embedded-hal         = "0.2.1"
 
 
 [dependencies.nrf52832-hal]
-version = "0.6.0"
+version = "0.6.1"
 default-features = false
-features = ["xxAA-package", "rt"]
+features = ["xxAA-package"]
 
 [dependencies.dw1000]
 git = "https://github.com/ferrous-systems/rust-dw1000.git"
-rev = "january"
+rev = "c589e9953e6c26ef02d374cedeb5be8434ab0134"
 
 [dev-dependencies]
 heapless          = "0.4.0"
@@ -97,3 +97,6 @@ required-features = ["dev", "rt"]
 codegen-units = 1
 lto           = true
 opt-level     = 3
+
+[patch.crates-io]
+nrf52832-hal = { git = "https://github.com/nrf-rs/nrf52-hal.git", rev = "2d87214c5ab63080034ddec5d30a2ef1d6abad0e" }
