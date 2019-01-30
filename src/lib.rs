@@ -364,8 +364,8 @@ impl DWM1001 {
         //   handle.
         let spim2 = p.SPIM2.constrain(spim::Pins {
             sck : pins.p0_16.into_push_pull_output(Level::Low).degrade(),
-            mosi: pins.p0_20.into_push_pull_output(Level::Low).degrade(),
-            miso: pins.p0_18.into_floating_input().degrade(),
+            mosi: Some(pins.p0_20.into_push_pull_output(Level::Low).degrade()),
+            miso: Some(pins.p0_18.into_floating_input().degrade()),
         });
 
         let twim1 = p.TWIM1.constrain(
